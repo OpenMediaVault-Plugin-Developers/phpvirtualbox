@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -e
+
+. /etc/default/openmediavault
+. /usr/share/openmediavault/scripts/helper-functions
+
+VIRTUALBOX_SITE_DIR=/usr/share/phpvirtualbox
+
+case "$1" in
+    configure)
+        omv_install_fixperms ${VIRTUALBOX_SITE_DIR}
+
+        # Activate package triggers. These triggers are only set during the
+        # package installation.
+        dpkg-trigger update-fixperms
+        dpkg-trigger update-locale
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument" >&2
+        exit 1
+    ;;
+esac
+
+exit 0

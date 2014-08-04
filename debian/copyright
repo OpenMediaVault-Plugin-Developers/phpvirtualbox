@@ -1,0 +1,10 @@
+Format: http://dep.debian.net/deps/dep5
+Upstream-Name: phpvirtualbox
+
+Files: debian/*
+Copyright: 2013-2014 OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+License: GPL-3+
+
+Files: usr/*
+Copyright: 2011-2014 Ian Moore (imoore76 at yahoo dot com)
+License: GPL-3+

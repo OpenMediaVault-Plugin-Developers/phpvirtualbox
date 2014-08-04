@@ -1,0 +1,2 @@
+usr/share/phpvirtualbox/config.php usr/share/phpvirtualbox
+phpvirtualbox/*                    usr/share/phpvirtualbox
