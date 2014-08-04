@@ -52,7 +52,7 @@ ehthumbs.db
 Desktop.ini
 
 # OpenMediaVault / Debian
-debian/openmediavault-*
+debian/phpvirtualbox-*
 debian/files
 debian/*.debhelper.log
 debian/*.debhelper
