@@ -51,12 +51,13 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# OpenMediaVault / Debian
-debian/phpvirtualbox-*
+# Package files
+debian/phpvirtualbox*
 debian/files
 debian/*.debhelper.log
 debian/*.debhelper
 debian/*substvars
 
 # Project specific
-/phpvirtualbox
+/debian/init
+/src

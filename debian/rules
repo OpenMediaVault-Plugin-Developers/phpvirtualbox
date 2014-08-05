@@ -1,7 +1,5 @@
 #!/usr/bin/make -f
 
-PLUGIN_NAME=phpvirtualbox
-
 clean:
 	dh_testdir
 	dh_testroot
@@ -12,8 +10,9 @@ install:
 	dh_testroot
 	dh_prep
 	dh_installdirs
+	dh_installinit --name vboxinit
 	dh_install
-	patch $(CURDIR)/debian/${PLUGIN_NAME}/usr/share/${PLUGIN_NAME}/js/phptest.php $(CURDIR)/patches/fix-missing-header-in-phptest.patch
+	patch $(CURDIR)/debian/phpvirtualbox/usr/share/phpvirtualbox/js/phptest.php $(CURDIR)/patches/fix-missing-header-in-phptest.patch
 
 binary-indep: install
 	dh_testdir

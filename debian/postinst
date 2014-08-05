@@ -6,7 +6,9 @@ PHPVIRTUALBOX_DIR=/usr/share/phpvirtualbox
 
 case "$1" in
     configure)
-        chown -R openmediavault:openmediavault ${PHPVIRTUALBOX_DIR}
+        find "${PHPVIRTUALBOX_DIR}" -type d -exec chmod 644 {} +
+        find "${PHPVIRTUALBOX_DIR}" -type f -exec chmod 755 {} +
+        chown -R www-data:www-data ${PHPVIRTUALBOX_DIR}
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
@@ -17,5 +19,7 @@ case "$1" in
         exit 1
     ;;
 esac
+
+#DEBHELPER#
 
 exit 0
