@@ -13,15 +13,7 @@ install:
 	dh_testdir
 	dh_testroot
 	dh_prep
-ifneq ($(shell [ -d phpvirtualbox ]; printf $$?), 0)
-	wget http://sourceforge.net/projects/phpvirtualbox/files/phpvirtualbox-4.3-1.zip/download -O phpvirtualbox.zip
-	unzip phpvirtualbox.zip
-	mv phpvirtualbox-4.3-1 phpvirtualbox
-	/bin/rm -f phpvirtualbox.zip
-	find . -maxdepth 1 -name "phpvirtualbox-*" -type d -exec /bin/mv {} phpvirtualbox \;
-endif
 	dh_installdirs
-	dh_installinit
 	dh_install
 	patch $(CURDIR)/debian/${PLUGIN_NAME}/usr/share/${PLUGIN_NAME}/js/phptest.php $(CURDIR)/patches/fix-missing-header-in-phptest.patch
 
@@ -31,7 +23,6 @@ binary-indep: install omv_clean_scm
 	dh_installchangelogs
 	dh_installdebconf
 	dh_lintian
-	dh_link
 	dh_compress
 	dh_fixperms
 	dh_installdeb

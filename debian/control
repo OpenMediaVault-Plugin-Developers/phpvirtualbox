@@ -7,8 +7,10 @@ Standards-Version: 3.9.3
 
 Package: phpvirtualbox
 Architecture: all
-Depends: openmediavault (>= 1.0.9), virtualbox-4.3, virtualbox-extpack-installer,
- makepasswd, ${misc:Depends}
-Description: VirtualBox plugin for OpenMediaVault.
- VirtualBox is a powerful x86 and AMD64/Intel64
- virtualization product.
+Depends: virtualbox-4.3, ${misc:Depends}
+Description: PhpVirtualBox is a web interface for VirtualBox
+ An open source, AJAX implementation of the VirtualBox user interface written
+ in PHP. As a modern web interface, it allows you to access and control remote
+ VirtualBox instances. PhpVirtualBox is designed to allow users to administer
+ VirtualBox in a headless environment - mirroring the VirtualBox GUI through
+ its web interface.

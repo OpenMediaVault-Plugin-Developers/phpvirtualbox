@@ -1,5 +1,5 @@
-phpvirtualbox (1.0.10) stable; urgency=low
+phpvirtualbox (4.3-1) stable; urgency=low
 
-  * Initial separation
+  * Package phpVirtualBox 4.3-1 release
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 30 Jul 2014 06:20:53 -0500
