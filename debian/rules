@@ -1,7 +1,5 @@
 #!/usr/bin/make -f
 
-include ./openmediavault.mk
-
 PLUGIN_NAME=phpvirtualbox
 
 clean:
@@ -17,7 +15,7 @@ install:
 	dh_install
 	patch $(CURDIR)/debian/${PLUGIN_NAME}/usr/share/${PLUGIN_NAME}/js/phptest.php $(CURDIR)/patches/fix-missing-header-in-phptest.patch
 
-binary-indep: install omv_clean_scm
+binary-indep: install
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs
