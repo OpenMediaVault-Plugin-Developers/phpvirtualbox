@@ -6,7 +6,7 @@ PHPVIRTUALBOX_DIR=/usr/share/phpvirtualbox
 
 case "$1" in
     configure)
-        chown -R openmediavault:openmediavault ${VIRTUALBOX_DIR}
+        chown -R openmediavault:openmediavault ${PHPVIRTUALBOX_DIR}
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
