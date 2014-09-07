@@ -6,8 +6,8 @@ PHPVIRTUALBOX_DIR=/usr/share/phpvirtualbox
 
 case "$1" in
     configure)
-        find "${PHPVIRTUALBOX_DIR}" -type d -exec chmod 644 {} +
-        find "${PHPVIRTUALBOX_DIR}" -type f -exec chmod 755 {} +
+        find "${PHPVIRTUALBOX_DIR}" -type d -exec chmod 755 {} +
+        find "${PHPVIRTUALBOX_DIR}" -type f -exec chmod 644 {} +
         chown -R www-data:www-data ${PHPVIRTUALBOX_DIR}
     ;;
 
