@@ -1,3 +1,9 @@
+phpvirtualbox (4.3-1.1) stable; urgency=low
+
+  * Resolve bugs in postinst script
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 08 Sep 2014 11:29:33 +0200
+
 phpvirtualbox (4.3-1) stable; urgency=low
 
   * Package phpVirtualBox 4.3-1 release
