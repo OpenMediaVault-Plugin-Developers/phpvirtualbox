@@ -12,7 +12,6 @@ install:
 	dh_installdirs
 	dh_installinit --name vboxinit
 	dh_install
-	patch $(CURDIR)/debian/phpvirtualbox/usr/share/phpvirtualbox/js/phptest.php $(CURDIR)/patches/fix-missing-header-in-phptest.patch
 
 binary-indep: install
 	dh_testdir
