@@ -10,7 +10,7 @@ install:
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	dh_installinit --name vboxinit
+	dh_installinit --no-start --name vboxinit
 	dh_install
 
 binary-indep: install

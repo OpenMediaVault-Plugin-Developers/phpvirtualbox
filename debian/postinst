@@ -20,7 +20,6 @@ case "$1" in
     ;;
 esac
 
-# Don't use DEBHELPER here at the moment since we don't want to enable
-# vboxinit by default. We still want to stop and disable it though.
+#DEBHELPER#
 
 exit 0
