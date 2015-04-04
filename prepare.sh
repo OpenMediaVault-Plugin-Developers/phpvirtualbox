@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PHPVIRTUALBOX_VERSION=4.3-2
+PHPVIRTUALBOX_VERSION=4.3-3
 
 if [ ! -d src ]; then
     wget http://sourceforge.net/projects/phpvirtualbox/files/phpvirtualbox-${PHPVIRTUALBOX_VERSION}.zip/download -O phpvirtualbox.zip
