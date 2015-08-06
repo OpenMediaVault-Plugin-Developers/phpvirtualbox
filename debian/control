@@ -7,7 +7,7 @@ Standards-Version: 3.9.3
 
 Package: phpvirtualbox
 Architecture: all
-Depends: virtualbox-4.3, ${misc:Depends}
+Depends: virtualbox-5.0, ${misc:Depends}
 Description: PhpVirtualBox is a web interface for VirtualBox
  An open source, AJAX implementation of the VirtualBox user interface written
  in PHP. As a modern web interface, it allows you to access and control remote
