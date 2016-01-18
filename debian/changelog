@@ -1,3 +1,9 @@
+phpvirtualbox (5.0-5) stable; urgency=low
+
+  * Package phpVirtualbox 5.0-5 release
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 18 Jan 2016 07:47:00 -0500
+
 phpvirtualbox (5.0-3) stable; urgency=low
 
   * Package phpVirtualbox 5.0-3 release
