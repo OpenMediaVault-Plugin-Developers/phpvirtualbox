@@ -1,1 +1,16 @@
-src/* usr/share/phpvirtualbox
+# Directories
+css usr/share/phpvirtualbox
+endpoints usr/share/phpvirtualbox
+images usr/share/phpvirtualbox
+js usr/share/phpvirtualbox
+languages usr/share/phpvirtualbox
+panes usr/share/phpvirtualbox
+rdpweb usr/share/phpvirtualbox
+tightvnc usr/share/phpvirtualbox
+
+# Files
+*.html usr/share/phpvirtualbox
+recovery.php-disabled usr/share/phpvirtualbox
+
+# Custom binaries
+debian/phpvirtualbox-manage-vms usr/bin

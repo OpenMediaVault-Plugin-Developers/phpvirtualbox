@@ -1,14 +1,15 @@
 #!/bin/sh
 
-PHPVIRTUALBOX_VERSION=5.0-5
+cd "$(dirname "$0")"
 
-if [ ! -d src ]; then
-    wget http://sourceforge.net/projects/phpvirtualbox/files/phpvirtualbox-${PHPVIRTUALBOX_VERSION}.zip/download -O phpvirtualbox.zip
-    unzip phpvirtualbox.zip
-    mv phpvirtualbox-${PHPVIRTUALBOX_VERSION} src
-    rm -f phpvirtualbox.zip
-    mv src/vboxinit debian/vboxinit.init
-    chmod +x debian/vboxinit.init
-fi
+# Get current version.
+version=$(dpkg-parsechangelog --show-field Version | cut -d- -f-2)
 
-exit 0
+# Download the source.
+debian/rules get-orig-source ORIG_SOURCE_DESTDIR=.
+
+# Extract files.
+tar xvfz phpvirtualbox_$version.orig.tar.gz
+
+# Copy the debian/ directory to the source directory.
+cp -r debian/ phpvirtualbox-$version/

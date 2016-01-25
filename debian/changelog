@@ -1,3 +1,9 @@
+phpvirtualbox (5.0-5-1) stable; urgency=medium
+
+  * Package phpVirtualBox 5.0-5 for Debian Jessie.
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 25 Jan 2016 23:43:13 +0100
+
 phpvirtualbox (5.0-5) stable; urgency=low
 
   * Package phpVirtualbox 5.0-5 release

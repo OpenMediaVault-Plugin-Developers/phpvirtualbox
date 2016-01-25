@@ -1,0 +1,15 @@
+[Unit]
+Description=PhpVirtualBox - start and save machines on boot and shutdown for user %I
+Requires=vboxdrv.service
+After=vboxdrv.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/phpvirtualbox-manage-vms --start-vms
+ExecStop=/usr/bin/phpvirtualbox-manage-vms --save-vms
+RemainAfterExit=true
+User=%i
+Group=vboxusers
+
+[Install]
+WantedBy=multi-user.target

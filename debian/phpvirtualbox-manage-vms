@@ -1,0 +1,46 @@
+#!/bin/bash
+
+start_vms()
+{
+	# Get all the machines.
+	local machines=$(VBoxManage list vms | awk '{ print $NF }' | sed -e 's/[{}]//g')
+
+    # Loop through the machines.
+	for uuid in $machines; do
+        # Get the startup mode.
+        local startup_mode=$(VBoxManage getextradata $uuid 'pvbx/startupMode' | awk '{ print $NF }')
+
+        # Only start when set to autostart.
+		if [ "${startup_mode}" == "auto" ]; then
+            # Start the machine.
+			VBoxManage startvm $uuid --type headless
+		fi
+	done
+}
+
+save_vms()
+{
+    # Get all the running machines.
+	local machines=$(VBoxManage list runningvms | awk '{ print $NF }' | sed -e 's/[{}]//g')
+
+    # Loop through the machines.
+	for uuid in $machines; do
+        # Save the machine state.
+		VBoxManage controlvm $uuid savestate
+	done
+}
+
+case "$1" in
+    --start-vms)
+        start_vms
+    ;;
+
+    --save-vms)
+        save_vms
+    ;;
+
+	*)
+		echo "Usage $0 {--start-vms|--save-vms}"
+		exit 1
+	;;
+esac
