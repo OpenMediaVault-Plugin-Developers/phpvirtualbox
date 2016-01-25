@@ -1,1 +1,1 @@
-phpvirtualbox package for OpenMediaVault 1.0+
+phpVirtualBox package for OpenMediaVault 3.0+

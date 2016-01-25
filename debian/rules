@@ -1,7 +1,24 @@
 #!/usr/bin/make -f
 
-%:
-	dh $@
+ORIG_SOURCE_DESTDIR=$(CURDIR)/..
+VERSION=$(shell dpkg-parsechangelog --show-field Version | cut -d- -f-2)
 
-override_dh_installinit:
-	dh_installinit -r --no-start --name=vboxinit
+%:
+	dh $@ --with systemd
+
+override_dh_install:
+	dh_install \
+		-XCHANGELOG.txt \
+		-XGPLv3.txt \
+		-Xlicense_3rd.txt \
+		-XLICENSE.txt \
+		-XREADME.txt
+
+override_dh_systemd_enable:
+	dh_systemd_enable --no-enable --name=phpvirtualbox-machines@
+
+override_dh_systemd_start:
+	dh_systemd_start --no-start phpvirtualbox-machines@.service
+
+get-orig-source:
+	uscan --force --verbose --rename --repack --download-current-version --destdir=$(ORIG_SOURCE_DESTDIR)

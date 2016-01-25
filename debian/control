@@ -2,13 +2,15 @@ Source: phpvirtualbox
 Section: net
 Priority: optional
 Maintainer: OpenMediaVault Plugin Developers <plugins@omv-extras.org>
-Build-Depends: debhelper (>= 9.0.0)
-Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 9), dh-systemd
+Standards-Version: 3.9.6
 
 Package: phpvirtualbox
 Architecture: all
-Depends: virtualbox-5.0, ${misc:Depends}
-Description: PhpVirtualBox is a web interface for VirtualBox
+Depends: virtualbox (>= 5.0),
+         virtualbox (<< 5.1),
+         ${misc:Depends}
+Description: Web interface for VirtualBox.
  An open source, AJAX implementation of the VirtualBox user interface written
  in PHP. As a modern web interface, it allows you to access and control remote
  VirtualBox instances. PhpVirtualBox is designed to allow users to administer
