@@ -1,3 +1,9 @@
+phpvirtualbox (5.0-5-2) stable; urgency=medium
+
+  * Allow virtualbox 5.1 to be used.
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 22 Aug 2016 08:33:13 -0500
+
 phpvirtualbox (5.0-5-1) stable; urgency=medium
 
   * Package phpVirtualBox 5.0-5 for Debian Jessie.
