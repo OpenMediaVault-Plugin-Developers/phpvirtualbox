@@ -1,6 +1,5 @@
 #!/usr/bin/make -f
 
-ORIG_SOURCE_DESTDIR=$(CURDIR)/..
 VERSION=$(shell dpkg-parsechangelog --show-field Version | cut -d- -f-2)
 
 %:
@@ -19,6 +18,3 @@ override_dh_systemd_enable:
 
 override_dh_systemd_start:
 	dh_systemd_start --no-start phpvirtualbox-machines@.service
-
-get-orig-source:
-	uscan --force --verbose --rename --repack --download-current-version --destdir=$(ORIG_SOURCE_DESTDIR)

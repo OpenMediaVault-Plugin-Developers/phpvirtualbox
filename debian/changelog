@@ -1,3 +1,9 @@
+phpvirtualbox (5.2-0) UNRELEASED; urgency=medium
+
+  * Update for phpvirtualbox 5.2
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 12 Apr 2018 07:41:28 -0500
+
 phpvirtualbox (5.0-5-2) stable; urgency=medium
 
   * Allow virtualbox 5.1 to be used.

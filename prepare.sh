@@ -6,10 +6,14 @@ cd "$(dirname "$0")"
 version=$(dpkg-parsechangelog --show-field Version | cut -d- -f-2)
 
 # Download the source.
-debian/rules get-orig-source ORIG_SOURCE_DESTDIR=.
+if [ ! -f "${version}.tar.gz" ]; then
+  wget https://github.com/phpvirtualbox/phpvirtualbox/archive/${version}.tar.gz -O ${version}.tar.gz
+fi
 
 # Extract files.
-tar xvfz phpvirtualbox_$version.orig.tar.gz
+if [ -f "${version}.tar.gz" ]; then
+  tar xvfz ${version}.tar.gz
 
-# Copy the debian/ directory to the source directory.
-cp -r debian/ phpvirtualbox-$version/
+  # Copy the debian/ directory to the source directory.
+  cp -rv debian/ phpvirtualbox-$version/
+fi

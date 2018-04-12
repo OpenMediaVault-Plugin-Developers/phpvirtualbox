@@ -9,5 +9,4 @@ version=$(dpkg-parsechangelog --show-field Version | cut -d- -f-2)
 cd phpvirtualbox-$version/
 
 # Package.
-debuild -us -uc
-debuild clean
+debuild -b -us -uc
