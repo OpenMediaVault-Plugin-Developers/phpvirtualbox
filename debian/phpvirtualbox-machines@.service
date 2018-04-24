@@ -1,7 +1,5 @@
 [Unit]
 Description=PhpVirtualBox - start and save machines on boot and shutdown for user %I
-Requires=vboxdrv.service
-After=vboxdrv.service
 
 [Service]
 Type=oneshot
