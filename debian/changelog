@@ -1,3 +1,15 @@
+phpvirtualbox (5.2-1) stable; urgency=low
+
+  * Update to 5.2-1
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 12 Nov 2018 18:02:01 -0600
+
+phpvirtualbox (5.2-0-2) stable; urgency=low
+
+  * Update to 5.2-1
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 12 Nov 2018 17:59:34 -0600
+
 phpvirtualbox (5.2-0-1) stable; urgency=low
 
   * Update for virtualbox 5.2.8
