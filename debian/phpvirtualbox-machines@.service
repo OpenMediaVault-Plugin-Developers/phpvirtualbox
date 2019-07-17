@@ -1,5 +1,6 @@
 [Unit]
 Description=PhpVirtualBox - start and save machines on boot and shutdown for user %I
+After=virtualbox.service
 
 [Service]
 Type=oneshot
